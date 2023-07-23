@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Debian中的一些常用命令 | 每日小栈</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://qkongz.github.io/favicon.ico?v=1690131542180">
+<link rel="stylesheet" href="https://qkongz.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="系统软件相关
+更新系统所有
+apt update
+更新现有软件
+apt upgrade -y
+更新软件依赖关系更新现有软件删除依赖以外的软件
+apt full-upgrade -y
+安装或更新指定软件如：curl wget
+apt inst..." />
+    <meta name="keywords" content="linux,笔记" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://qkongz.github.io">
+        <img src="https://qkongz.github.io/images/avatar.png?v=1690131542180" class="site-logo">
+        <h1 class="site-title">每日小栈</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/QkongZ" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://QkongZ.github.io" target="_blank">QkongZ</a> | <a class="rss" href="https://qkongz.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Debian中的一些常用命令</h2>
+            <div class="post-date">2023-07-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://qkongz.github.io/post-images/debian_about.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="系统软件相关">系统软件相关</h1>
+<p><strong>更新系统所有</strong><br>
+<code>apt update</code><br>
+<strong>更新现有软件</strong><br>
+<code>apt upgrade -y</code><br>
+<strong>更新软件依赖关系更新现有软件删除依赖以外的软件</strong><br>
+<code>apt full-upgrade -y</code><br>
+<strong>安装或更新指定软件如：curl wget</strong><br>
+<code>apt install -y curl wget</code><br>
+<strong>删除指定软件如：curl wget</strong><br>
+<code>apt remove -y curl wget</code><br>
+<strong>删除debian用户</strong><br>
+<code>sudo deluser debian</code></p>
+<!-- more -->
+<h1 id="文件管理相关">文件管理相关</h1>
+<p><strong>进入home目录 [/]为绝对位置</strong><br>
+<code>cd /home</code><br>
+** 创建web目录**<br>
+<code>mkdir web</code><br>
+<strong>创建空nginx.conf文件</strong><br>
+<code>touch nginx.conf</code><br>
+<strong>编辑docker-compose.yml文件</strong><br>
+<code>nano docker-compose.yml</code><br>
+<strong>压缩/home/web目录，压缩包存放到当前目录</strong><br>
+<code>tar -czvf web.tar.gz /home/web</code><br>
+<strong>当前目录解压web.tar.gz文件</strong><br>
+<code>tar -xzvf web.tar.gz</code><br>
+<strong>删除home/web目录下所有内容</strong><br>
+<code>rm -r /home/web/*</code><br>
+<strong>删除/home/web.tar.gz文件</strong><br>
+<code>rm /home/web.tar.gz</code><br>
+<strong>下载maccms10.zip文件到当前目录</strong><br>
+<code>wget https://github.com/magicblack/maccms_down/raw/master/maccms10.zip</code><br>
+<strong>移动home/web目录下所有文件到root目录</strong><br>
+<code>mv /home/web/* /root/</code><br>
+<strong>拷贝home/web目录到root</strong><br>
+<code>cp -r /home/web /root</code><br>
+<strong>拷贝home/web目录下的test.txt到root</strong><br>
+<code>cp /home/web/test.txt /root</code><br>
+<strong>赋予/var/www/html最高读写权限</strong><br>
+<code>chmod -R 777 /var/www/html</code><br>
+<strong>将home目录下的test.txt改名成root.txt</strong><br>
+<code>mv /home/test.txt /home/root.txt</code><br>
+<strong>将root.txt中所有的test替换成root</strong><br>
+<code>sed -i 's/test/root/g' root.txt</code><br>
+<strong>将root.txt文件所有内容删除添加一行文本root=12345保存退出</strong><br>
+<code>cat &gt; /home/root.txt &lt;&lt; EOF</code><br>
+<code>root=12345</code><br>
+<code>EOF</code><br>
+<strong>在root.txt文本中末尾添加一行end=yyds</strong><br>
+<code>echo &quot;end=yyds&quot; &gt;&gt; root.txt</code></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://qkongz.github.io/tag/N4YHvrAZ8/" class="tag">
+                    linux
+                  </a>
+                
+                  <a href="https://qkongz.github.io/tag/SRpasSIoZ/" class="tag">
+                    笔记
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qkongz.github.io/post/test/">
+                  <h3 class="post-title">
+                    test
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+  <script src="https://fastly.jsdelivr.net/gh/QkongZ/CFworker_pages/website-dir/live2d-widget/autoload.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div id="aplayer" class="aplayer" data-autoplay="true" data-id="719160776" data-server="netease" data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>
+  <script src="https://unpkg.com/meting@1.2.0/dist/Meting.min.js"></script>
+  <!--点击特效-->
+  <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+
+
+
+
+
+  </body>
+</html>

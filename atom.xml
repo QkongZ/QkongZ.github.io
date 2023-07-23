@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://qkongz.github.io</id>
+    <title>每日小栈</title>
+    <updated>2023-07-23T17:08:17.826Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://qkongz.github.io"/>
+    <link rel="self" href="https://qkongz.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://qkongz.github.io/images/avatar.png</logo>
+    <icon>https://qkongz.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, 每日小栈</rights>
+    <entry>
+        <title type="html"><![CDATA[Debian中的一些常用命令]]></title>
+        <id>https://qkongz.github.io/post/debian_about/</id>
+        <link href="https://qkongz.github.io/post/debian_about/">
+        </link>
+        <updated>2023-07-23T16:15:24.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="系统软件相关">系统软件相关</h1>
+<p><strong>更新系统所有</strong><br>
+<code>apt update</code><br>
+<strong>更新现有软件</strong><br>
+<code>apt upgrade -y</code><br>
+<strong>更新软件依赖关系更新现有软件删除依赖以外的软件</strong><br>
+<code>apt full-upgrade -y</code><br>
+<strong>安装或更新指定软件如：curl wget</strong><br>
+<code>apt install -y curl wget</code><br>
+<strong>删除指定软件如：curl wget</strong><br>
+<code>apt remove -y curl wget</code><br>
+<strong>删除debian用户</strong><br>
+<code>sudo deluser debian</code></p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="系统软件相关">系统软件相关</h1>
+<p><strong>更新系统所有</strong><br>
+<code>apt update</code><br>
+<strong>更新现有软件</strong><br>
+<code>apt upgrade -y</code><br>
+<strong>更新软件依赖关系更新现有软件删除依赖以外的软件</strong><br>
+<code>apt full-upgrade -y</code><br>
+<strong>安装或更新指定软件如：curl wget</strong><br>
+<code>apt install -y curl wget</code><br>
+<strong>删除指定软件如：curl wget</strong><br>
+<code>apt remove -y curl wget</code><br>
+<strong>删除debian用户</strong><br>
+<code>sudo deluser debian</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>https://qkongz.github.io/post/test/</id>
+        <link href="https://qkongz.github.io/post/test/">
+        </link>
+        <updated>2023-07-21T18:01:53.000Z</updated>
+    </entry>
+</feed>
